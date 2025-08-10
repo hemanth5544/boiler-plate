@@ -2,10 +2,11 @@
   "name": "backend",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nodemon src/cmd/index.ts",
+  "dev": "nodemon",
     "build": "tsc -b",
-    "start": "node dist/cmd/index.js",
+      "start": "node dist/cmd/index.js",
     "lint": "echo 'Add lint script here'"
   },
   "dependencies": {

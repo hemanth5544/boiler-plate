@@ -11,10 +11,11 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo run clean && rimraf node_modules",
     "typecheck": "turbo run typecheck"
-
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
     "turbo": "^2.5.5",
     "typescript": "^5.8.3"
   },
