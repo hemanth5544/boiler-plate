@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "My API",
+    "title": "API",
     "version": "1.0.0",
-    "description": "A simple API to demonstrate Scalar OpenAPI"
+    "description": "API DOCS"
   },
   "paths": {
     "/api/hello": {
