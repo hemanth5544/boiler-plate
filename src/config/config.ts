@@ -7,22 +7,22 @@ dotenv.config({ path: envFile });
 const configSchema = z.object({
 
 
-  SERVER_PORT: z.string().transform((val) => parseInt(val, 10)).default(8080),
-  SERVER_READ_TIMEOUT: z.string().transform((val) => parseInt(val, 10)).default(30),
-  SERVER_WRITE_TIMEOUT: z.string().transform((val) => parseInt(val, 10)).default(30),
-  SERVER_IDLE_TIMEOUT: z.string().transform((val) => parseInt(val, 10)).default(60),
+  SERVER_PORT: z.string().transform((val) => parseInt(val, 10)).default('8080'),
+  SERVER_READ_TIMEOUT: z.string().transform((val) => parseInt(val, 10)).default('30'),
+  SERVER_WRITE_TIMEOUT: z.string().transform((val) => parseInt(val, 10)).default('30'),
+  SERVER_IDLE_TIMEOUT: z.string().transform((val) => parseInt(val, 10)).default('60'),
   SERVER_CORS_ALLOWED_ORIGINS: z.string().default('http://localhost:3000'),
 
   DATABASE_HOST: z.string().default('localhost'),
-  DATABASE_PORT: z.string().transform((val) => parseInt(val, 10)).default(5432),
+  DATABASE_PORT: z.string().transform((val) => parseInt(val, 10)).default('5432'),
   DATABASE_USER: z.string().default('postgres'),
   DATABASE_PASSWORD: z.string().default(''),
   DATABASE_NAME: z.string().default('tasker'),
   DATABASE_SSL_MODE: z.string().default('disable'),
-  DATABASE_MAX_OPEN_CONNS: z.string().transform((val) => parseInt(val, 10)).default(25),
-  DATABASE_MAX_IDLE_CONNS: z.string().transform((val) => parseInt(val, 10)).default(25),
-  DATABASE_CONN_MAX_LIFETIME: z.string().transform((val) => parseInt(val, 10)).default(300),
-  DATABASE_CONN_MAX_IDLE_TIME: z.string().transform((val) => parseInt(val, 10)).default(300),
+  DATABASE_MAX_OPEN_CONNS: z.string().transform((val) => parseInt(val, 10)).default('25'),
+  DATABASE_MAX_IDLE_CONNS: z.string().transform((val) => parseInt(val, 10)).default('25'),
+  DATABASE_CONN_MAX_LIFETIME: z.string().transform((val) => parseInt(val, 10)).default('300'),
+  DATABASE_CONN_MAX_IDLE_TIME: z.string().transform((val) => parseInt(val, 10)).default('300'),
 
   AUTH_SECRET_KEY: z.string().default('secret'),
 

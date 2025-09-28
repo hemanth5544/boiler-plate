@@ -4,9 +4,15 @@ import fs from 'fs';
 import path from 'path';
 import  config from './config/config';
 import logger from './logger/logger';
+import Database from './database/database';
+
+// const sequelize = Database.getInstance();
+
+
+
 
 const app = express();
-const openApiSpecPath = path.join(__dirname, 'openapi.json');
+const openApiSpecPath = path.join(__dirname, '..', 'openapi.json');
 const OpenApiSpecification = JSON.parse(fs.readFileSync(openApiSpecPath, 'utf-8'));
 app.use(
   '/reference',
