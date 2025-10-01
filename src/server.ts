@@ -5,12 +5,9 @@ import path from 'path';
 import  config from './config/config';
 import logger from './logger/logger';
 import Database from './database/database';
+import { globalErrorHandler, throwError } from './errs/http'
 
 // const sequelize = Database.getInstance();
-
-
-
-
 const app = express();
 const openApiSpecPath = path.join(__dirname, '..', 'openapi.json');
 const OpenApiSpecification = JSON.parse(fs.readFileSync(openApiSpecPath, 'utf-8'));
@@ -22,9 +19,16 @@ app.use(
     },
   })
 );
+app.use(globalErrorHandler);
 
 app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello, world!' });
+
+  try {
+    res.json({ message: 'Hello, world!' });
+
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 app.listen(config.SERVER_PORT, () => {

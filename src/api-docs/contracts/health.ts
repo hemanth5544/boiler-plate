@@ -1,6 +1,6 @@
 import { initContract } from "@ts-rest/core";
 import { z } from "zod";
-import { ZHealthResponse } from "./health-response"
+import {ZHealthResponse} from "@zod/Health/health"
 
 const c = initContract();
 
