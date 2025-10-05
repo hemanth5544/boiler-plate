@@ -6,7 +6,13 @@
     "dev": "ts-node src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "generate": "ts-node src/api-docs/index.ts"
+    "generate": "ts-node src/api-docs/index.ts",
+    "db:migrate": "npx sequelize-cli db:migrate",
+  "db:migrate:undo": "sequelize-cli db:migrate:undo",
+  "db:migrate:undo:all": "sequelize-cli db:migrate:undo:all",
+  "db:seed": "sequelize-cli db:seed:all",
+  "db:seed:undo": "sequelize-cli db:seed:undo:all",
+  "db:migration:generate": "npx sequelize-cli migration:generate --name"
   },
   "dependencies": {
     "@anatine/zod-openapi": "^2.2.7",

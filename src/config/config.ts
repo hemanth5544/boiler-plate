@@ -17,12 +17,13 @@ const configSchema = z.object({
   DATABASE_PORT: z.string().transform((val) => parseInt(val, 10)).default('5432'),
   DATABASE_USER: z.string().default('postgres'),
   DATABASE_PASSWORD: z.string().default(''),
-  DATABASE_NAME: z.string().default('tasker'),
+  DATABASE_NAME: z.string().default('boilerplate'),
   DATABASE_SSL_MODE: z.string().default('disable'),
   DATABASE_MAX_OPEN_CONNS: z.string().transform((val) => parseInt(val, 10)).default('25'),
   DATABASE_MAX_IDLE_CONNS: z.string().transform((val) => parseInt(val, 10)).default('25'),
   DATABASE_CONN_MAX_LIFETIME: z.string().transform((val) => parseInt(val, 10)).default('300'),
   DATABASE_CONN_MAX_IDLE_TIME: z.string().transform((val) => parseInt(val, 10)).default('300'),
+  DATABASE_DIALECT: z.enum(['mysql', 'postgres', 'sqlite', 'mariadb', 'mssql']).default('postgres'),
 
   AUTH_SECRET_KEY: z.string().default('secret'),
 

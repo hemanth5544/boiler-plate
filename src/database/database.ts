@@ -13,7 +13,7 @@ class Database {
         console.log(config.DATABASE_PASSWORD)
         Database.instance = new Sequelize(config.DATABASE_NAME, config.DATABASE_USER, config.DATABASE_PASSWORD, {
           host: config.DATABASE_HOST,
-          dialect: 'postgres',
+          dialect: config.DATABASE_DIALECT,
           port: config.DATABASE_PORT,
         });
 
