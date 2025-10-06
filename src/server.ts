@@ -19,7 +19,7 @@ app.use(
     },
   })
 );
-app.use(globalErrorHandler);
+app.use   (globalErrorHandler);
 
 app.get('/api/hello', (req, res) => {
 
