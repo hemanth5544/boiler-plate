@@ -4,5 +4,5 @@ import { healthContract } from "./health";
 const c = initContract();
 
 export const apiContract = c.router({
-  Health: healthContract
+	Health: healthContract,
 });

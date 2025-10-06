@@ -13,8 +13,8 @@
     "db:seed": "sequelize-cli db:seed:all",
     "db:seed:undo": "sequelize-cli db:seed:undo:all",
     "db:migration:generate": "npx sequelize-cli migration:generate --name",
-    "lint": "npx @biomejs/biome lint  --write src/**/*.ts",
-    "format": "npx @biomejs/biome format  --write src/**/*.ts"
+    "lint": "npx @biomejs/biome lint  --write",
+    "format": "npx @biomejs/biome format  --write"
   },
   "dependencies": {
     "@anatine/zod-openapi": "^2.2.7",
