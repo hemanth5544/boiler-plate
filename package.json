@@ -6,7 +6,7 @@
     "dev": "ts-node -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "generate": "ts-node src/api-docs/index.ts",
+    "generate": "ts-node  src/api-docs/index.ts",
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:migrate:undo": "sequelize-cli db:migrate:undo",
     "db:migrate:undo:all": "sequelize-cli db:migrate:undo:all",
