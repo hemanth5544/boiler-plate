@@ -1,5 +1,5 @@
 // error.ts
-import logger from "../logger/logger";
+import {logger} from "@logger/logger";
 
 class AppError extends Error {
 	statusCode: number;

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/server.ts",
+    "dev": "ts-node -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "generate": "ts-node src/api-docs/index.ts",
@@ -40,6 +40,7 @@
     "@typescript-eslint/parser": "^8.45.0",
     "biome": "^0.3.3",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2"
   }
 }

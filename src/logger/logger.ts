@@ -22,7 +22,7 @@ const logLevels = {
 	},
 };
 
-const logger = winston.createLogger({
+export const logger = winston.createLogger({
 	levels: logLevels.levels,
 	transports: [
 		new winston.transports.Console({
@@ -56,4 +56,3 @@ const logger = winston.createLogger({
 
 winston.addColors(logLevels.colors);
 
-export default logger;
