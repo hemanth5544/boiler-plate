@@ -22,9 +22,9 @@ class AppError extends Error {
 
 export const globalErrorHandler = (
 	err: AppError,
-	req: any,
+	_req: any,
 	res: any,
-	next: any,
+	_next: any,
 ) => {
 	if (!err.isOperational) {
 		logger.error("Critical Error:", err);

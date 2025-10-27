@@ -10,14 +10,13 @@ class Database {
 	public static getInstance(): Sequelize {
 		if (!Database.instance) {
 			try {
-				console.log(config.DATABASE_PASSWORD);
 				Database.instance = new Sequelize(
 					config.DATABASE_NAME,
 					config.DATABASE_USER,
 					config.DATABASE_PASSWORD,
 					{
 						host: config.DATABASE_HOST,
-						dialect: config.DATABASE_DIALECT,
+						dialect: "postgres",
 						port: config.DATABASE_PORT,
 					},
 				);

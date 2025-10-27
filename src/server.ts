@@ -1,13 +1,13 @@
 import express from "express";
 import { apiReference } from "@scalar/express-api-reference";
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import config from "./config/config";
 import logger from "./logger/logger";
 import Database from "./database/database";
-import { globalErrorHandler, throwError } from "./errs/http";
+import { globalErrorHandler, } from "./errs/http";
 
-// const sequelize = Database.getInstance();
+const _sequelize = Database.getInstance();
 const app = express();
 const openApiSpecPath = path.join(__dirname, "..", "openapi.json");
 const OpenApiSpecification = JSON.parse(
@@ -23,10 +23,10 @@ app.use(
 );
 app.use(globalErrorHandler);
 
-app.get("/api/hello", (req, res) => {
+app.get("/api/hello", (_req, res) => {
 	try {
 		res.json({ message: "Hello, world!" });
-	} catch (error) {
+	} catch (_error) {
 		res.status(500).json({ error: "Internal Server Error" });
 	}
 });
