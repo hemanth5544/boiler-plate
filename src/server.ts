@@ -5,7 +5,7 @@ import path from "node:path";
 import config from "./config/config";
 import logger from "./logger/logger";
 import Database from "./database/database";
-import { globalErrorHandler, } from "./errs/http";
+import { globalErrorHandler } from "./errs/http";
 
 const _sequelize = Database.getInstance();
 const app = express();
@@ -22,18 +22,11 @@ app.use(
 	}),
 );
 app.use(globalErrorHandler);
-
-app.get("/api/hello", (_req, res) => {
-	try {
-		res.json({ message: "Hello, world!" });
-	} catch (_error) {
-		res.status(500).json({ error: "Internal Server Error" });
-	}
-});
-
 app.listen(config.SERVER_PORT, () => {
-	logger.info(`Server is running on http://localhost:${config.SERVER_PORT}`);
 	logger.info(
-		`API Reference is available at http://localhost:${config.SERVER_PORT}/reference`,
+		`Server is running on http://${config.HOST_NAME}:${config.SERVER_PORT}`,
+	);
+	logger.info(
+		`API Reference is available at http://${config.HOST_NAME}:${config.SERVER_PORT}/reference`,
 	);
 });

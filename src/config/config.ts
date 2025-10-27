@@ -5,6 +5,7 @@ const envFile =
 dotenv.config({ path: envFile });
 const configSchema = z.object({
 	PRIMARY_ENV: z.string(),
+	HOST_NAME: z.string(),
 	SERVER_PORT: z.string().regex(/^\d+$/).transform(Number),
 	SERVER_READ_TIMEOUT: z.string().regex(/^\d+$/).transform(Number),
 	SERVER_WRITE_TIMEOUT: z.string().regex(/^\d+$/).transform(Number),
