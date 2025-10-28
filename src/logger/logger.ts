@@ -55,4 +55,3 @@ export const logger = winston.createLogger({
 });
 
 winston.addColors(logLevels.colors);
-

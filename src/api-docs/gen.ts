@@ -17,7 +17,7 @@ const filteredDoc = replaceCustomFileTypesToOpenApiCompatible(
 );
 
 const formattedDoc = JSON.parse(filteredDoc);
-console.log("Generated OpenAPI documentation",formattedDoc);
+console.log("Generated OpenAPI documentation", formattedDoc);
 
 const filePaths = ["./openapi.json", "../src/openapi.json"];
 
