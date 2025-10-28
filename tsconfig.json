@@ -9,11 +9,14 @@
     "outDir": "./dist",
     "baseUrl": "./src",
      "paths": {
-    "@zod/*": ["../zod/*"],
+      "@zod/*": ["../zod/*"],
     "@logger/*": ["logger/*"],
+    "@repository/*": ["repository/*"],
+    "@model/*": ["../models/*"],
+    "@services/*": ["services/*"],
+    "@handlers/*": ["handlers/*"],
       }
   },
-  "include": [
-    "src/**/*.ts"
-  ]
+    "include": ["src/**/*.ts", "../zod/**/*.ts"]
+
 }
