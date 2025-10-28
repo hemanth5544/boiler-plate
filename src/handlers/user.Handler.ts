@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { z } from "zod";
-import { userService } from "@services/userServices";
+import { userService } from "@services/user.services";
 import { logger } from "@logger/logger";
 
 const userIdSchema = z.object({
