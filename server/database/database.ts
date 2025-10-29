@@ -18,6 +18,7 @@ class Database {
 						host: config.DATABASE_HOST,
 						dialect: "postgres",
 						port: config.DATABASE_PORT,
+						logging: false,
 					},
 				);
 
