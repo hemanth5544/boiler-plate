@@ -6,7 +6,7 @@ import config from "@config/config";
 import { logger } from "@logger/logger";
 import Database from "@database/database";
 import { globalErrorHandler } from "@errs/http";
-import router from "@routes/userRoutes";
+import router from "@routes/index";
 
 const _sequelize = Database.getInstance();
 const app = express();

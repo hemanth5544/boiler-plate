@@ -1,6 +1,6 @@
 
 import { z } from "zod";
-const ZHealthCheck = z.object({
+export const ZHealthCheck = z.object({
   status: z.string(),
   response_time: z.string(),
   error: z.string().optional(),
