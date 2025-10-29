@@ -1,5 +1,5 @@
 import { initContract } from "@ts-rest/core";
-import { ZUserResponse, ZUsersResponse } from "../../../zod/User/user";
+import { ZUserResponse, ZUsersResponse } from "@zod/User/user";
 import { z } from "zod";
 
 const c = initContract();
@@ -7,7 +7,7 @@ const c = initContract();
 export const userContract = c.router({
 	getUser: {
 		summary: "Get user",
-		path: "/users/:id",
+		path: "/user/:id",
 		method: "GET",
 		description: "Get user by ID",
 		responses: {
@@ -24,4 +24,5 @@ export const userContract = c.router({
 			200: ZUsersResponse,
 		},
 	},
+
 });

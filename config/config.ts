@@ -1,4 +1,4 @@
-import config from '../src/config/config'
+import config from '../server/config/config'
 
 module.exports = {
   development: {

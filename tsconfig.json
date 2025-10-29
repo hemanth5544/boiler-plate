@@ -7,7 +7,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "baseUrl": "./src",
+    "baseUrl": "server",
      "paths": {
       "@zod/*": ["../zod/*"],
     "@logger/*": ["logger/*"],
@@ -17,6 +17,6 @@
     "@handlers/*": ["handlers/*"],
       }
   },
-    "include": ["src/**/*.ts", "../zod/**/*.ts"]
+    "include": ["server/**/*.ts", "../zod/**/*.ts"]
 
 }

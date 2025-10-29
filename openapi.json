@@ -90,7 +90,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/user/{id}": {
       "get": {
         "description": "Get user by ID",
         "summary": "Get user",

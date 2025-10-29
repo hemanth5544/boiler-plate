@@ -5,7 +5,10 @@ const _sequelize = Database.getInstance();
 
 export class UserRepo {
 	static async getAllUsers() {
-		return await User.findAll();
+
+		const res= await User.findAll();
+
+		return res;
 	}
 
 	static async findById(id: number) {

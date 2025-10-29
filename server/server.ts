@@ -6,6 +6,7 @@ import config from "./config/config";
 import { logger } from "@logger/logger";
 import Database from "./database/database";
 import { globalErrorHandler } from "./errs/http";
+import router from "routes/userRoutes";
 
 const _sequelize = Database.getInstance();
 const app = express();
@@ -13,6 +14,7 @@ const openApiSpecPath = path.join(__dirname, "..", "openapi.json");
 const OpenApiSpecification = JSON.parse(
 	fs.readFileSync(openApiSpecPath, "utf-8"),
 );
+app.use("/api",router);
 app.use(
 	"/reference",
 	apiReference({
