@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node -r tsconfig-paths/register server/server.ts",
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register server/server.ts",
     "build": "tsc",
     "start": "node  dist/server.js",
     "generate": "ts-node -r tsconfig-paths/register server/api-docs/gen.ts",

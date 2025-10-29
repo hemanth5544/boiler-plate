@@ -1,4 +1,4 @@
-import config from "../config/config";
+import config from "@config/config";
 
 config.DATABASE_HOST;
 config.DATABASE_PASSWORD;
