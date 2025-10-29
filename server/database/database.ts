@@ -2,7 +2,6 @@ import { Sequelize } from "sequelize";
 import config from "@config/config";
 import { logger } from "@logger/logger";
 
-
 class Database {
 	private static instance: Sequelize;
 

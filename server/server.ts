@@ -14,7 +14,7 @@ const openApiSpecPath = path.join(__dirname, "..", "openapi.json");
 const OpenApiSpecification = JSON.parse(
 	fs.readFileSync(openApiSpecPath, "utf-8"),
 );
-app.use("/api",router);
+app.use("/api", router);
 app.use(
 	"/reference",
 	apiReference({

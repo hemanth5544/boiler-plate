@@ -24,5 +24,4 @@ export const userContract = c.router({
 			200: ZUsersResponse,
 		},
 	},
-
 });
