@@ -9,14 +9,18 @@
     "outDir": "./dist",
     "baseUrl": "server",
      "paths": {
-      "@zod/*": ["../zod/*"],
+    "@zod/*": ["../zod/*"],
     "@logger/*": ["logger/*"],
     "@repository/*": ["repository/*"],
     "@model/*": ["../models/*"],
     "@services/*": ["services/*"],
     "@handlers/*": ["handlers/*"],
-      }
-  },
-    "include": ["server/**/*.ts", "../zod/**/*.ts"]
+    "@routes/*": ["routes/*"],
+    "@config/*": ["config/*"],
+    "@database/*": ["database/*"],
+    "@errs/*": ["errs/*"]
+  }
+},
+  "include": ["server/**/*.ts", "../zod/**/*.ts"]
 
 }

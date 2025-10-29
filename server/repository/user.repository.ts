@@ -1,4 +1,4 @@
-import Database from "database/database";
+import Database from "@database/database";
 import { User } from "@model/users.model";
 
 const _sequelize = Database.getInstance();

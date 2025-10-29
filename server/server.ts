@@ -2,11 +2,11 @@ import express from "express";
 import { apiReference } from "@scalar/express-api-reference";
 import fs from "node:fs";
 import path from "node:path";
-import config from "./config/config";
+import config from "@config/config";
 import { logger } from "@logger/logger";
-import Database from "./database/database";
-import { globalErrorHandler } from "./errs/http";
-import router from "routes/userRoutes";
+import Database from "@database/database";
+import { globalErrorHandler } from "@errs/http";
+import router from "@routes/userRoutes";
 
 const _sequelize = Database.getInstance();
 const app = express();

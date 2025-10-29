@@ -1,7 +1,6 @@
 import { Sequelize } from "sequelize";
 import config from "../config/config";
 import { logger } from "@logger/logger";
-// import initUserModel from "@model/users.model";
 
 
 class Database {
