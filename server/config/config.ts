@@ -1,8 +1,6 @@
 import { z } from "zod";
 import dotenv from "dotenv";
-const envFile =
-	process.env.NODE_ENV === "production" ? ".env.prod" : ".env.dev";
-dotenv.config({ path: envFile });
+dotenv.config();
 const configSchema = z.object({
 	PRIMARY_ENV: z.string(),
 	HOST_NAME: z.string(),
@@ -31,12 +29,12 @@ const configSchema = z.object({
 	AWS_SECRET_ACCESS_KEY: z.string(),
 	AWS_UPLOAD_BUCKET: z.string(),
 	AWS_ENDPOINT_URL: z.string().optional(),
-	OBSERVABILITY_SERVICE_NAME: z.string(),
+	NEW_RELIC_APP_NAME: z.string(),
 	OBSERVABILITY_ENVIRONMENT: z.string(),
 	OBSERVABILITY_LOGGING_LEVEL: z.string(),
 	OBSERVABILITY_LOGGING_FORMAT: z.string(),
 	OBSERVABILITY_LOGGING_SLOW_QUERY_THRESHOLD: z.string(),
-	OBSERVABILITY_NEW_RELIC_LICENSE_KEY: z.string(),
+	NEW_RELIC_LICENSE_KEY: z.string(),
 	OBSERVABILITY_NEW_RELIC_APP_LOG_FORWARDING_ENABLED: z.string(),
 	OBSERVABILITY_NEW_RELIC_DISTRIBUTED_TRACING_ENABLED: z.string(),
 	OBSERVABILITY_NEW_RELIC_DEBUG_LOGGING: z.string(),

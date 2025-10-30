@@ -55,3 +55,9 @@ export const logger = winston.createLogger({
 });
 
 winston.addColors(logLevels.colors);
+try {
+	const newrelicFormatter = require("@newrelic/winston-enricher");
+	newrelicFormatter(winston);
+} catch (error) {
+	console.warn("New Relic winston enricher not available:", error);
+}
