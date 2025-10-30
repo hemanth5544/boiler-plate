@@ -53,6 +53,7 @@ yarn-error.log*
 .DS_Store
 *.pem
 
+newrelic_agent.log
 tsconfig.tsbuildinfo
 .env
 .turbo

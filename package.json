@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node -r tsconfig-paths/register server/server.ts",
+    "dev": "NODE_ENV=development ts-node -r dotenv/config -r tsconfig-paths/register server/server.ts dotenv_config_path=.env.dev",
     "build": "tsc",
     "start": "node  dist/server.js",
     "generate": "ts-node -r tsconfig-paths/register server/api-docs/gen.ts",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@anatine/zod-openapi": "^2.2.7",
+    "@newrelic/winston-enricher": "^4.0.1",
     "@scalar/express-api-reference": "^0.8.13",
     "@ts-rest/core": "^3.52.1",
     "@ts-rest/express": "^3.52.1",
@@ -27,6 +28,7 @@
     "@types/node": "^24.2.1",
     "dotenv": "^17.2.1",
     "express": "^4.18.0",
+    "newrelic": "^13.6.2",
     "openapi3-ts": "^4.1.2",
     "pg": "^8.16.3",
     "pg-hstore": "^2.3.4",
@@ -36,6 +38,8 @@
     "zod": "^3.20.0"
   },
   "devDependencies": {
+    "@types/newrelic": "^9.14.8",
+    "@types/newrelic__winston-enricher": "^0.1.5",
     "@typescript-eslint/eslint-plugin": "^8.45.0",
     "@typescript-eslint/parser": "^8.45.0",
     "biome": "^0.3.3",
