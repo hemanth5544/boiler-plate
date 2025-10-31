@@ -9,9 +9,9 @@ exports.config = {
     filepath: 'stdout'
   },
   application_logging: {
-    enabled: true,
+    enabled: config.NEW_RELIC_DEBUG_LOGGING,
     forwarding: {
-      enabled: true,
+      enabled: config.NEW_RELIC_APP_LOG_FORWARDING_ENABLED,
       max_samples_stored: 10000
     },
     metrics: {

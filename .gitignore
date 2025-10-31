@@ -52,10 +52,10 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
-
+.env.prod
 newrelic_agent.log
 tsconfig.tsbuildinfo
-.env
+.env.dev
 .turbo
 .vscode
 package-lock.json
