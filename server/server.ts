@@ -1,3 +1,4 @@
+import "newrelic";
 import express from "express";
 import { apiReference } from "@scalar/express-api-reference";
 import fs from "node:fs";
@@ -7,7 +8,6 @@ import { logger } from "@logger/logger";
 import Database from "@database/database";
 import { globalErrorHandler } from "@errs/http";
 import router from "@routes/index";
-import "newrelic";
 
 const app = express();
 const openApiSpecPath = path.join(__dirname, "..", "openapi.json");

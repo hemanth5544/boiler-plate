@@ -3,7 +3,7 @@ import { logger } from "@logger/logger";
 
 export class userService {
 	static async getUserById(id: number) {
-		if (!id || isNaN(id)) {
+		if (!id || Number.isNaN(id)) {
 			throw new Error("Invalid user ID");
 		}
 

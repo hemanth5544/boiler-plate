@@ -4,8 +4,8 @@ import Database from "@database/database";
 export class utilService {
 	static async performHealthCheck() {
 		try {
-			const dbStatus = await this.checkDatabase();
-			const redisStatus = await this.checkRedis();
+			const dbStatus = await utilService.checkDatabase();
+			const redisStatus = await utilService.checkRedis();
 
 			const healthCheckResponse = {
 				status:

@@ -1,10 +1,10 @@
-import { Request, Response } from "express";
+import type { Request, Response } from "express";
 import { logger } from "@logger/logger";
 import { ZHealthResponse } from "@zod/Health/health";
 import { utilService } from "@services/util.services";
 
 export const healthCheckHandler = {
-	async checkHealth(req: Request, res: Response) {
+	async checkHealth(_req: Request, res: Response) {
 		try {
 			const result = await utilService.performHealthCheck();
 
