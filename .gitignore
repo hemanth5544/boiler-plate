@@ -44,6 +44,12 @@ build
 dist
 tmp
 
+# Environment files
+.env
+.env.*
+!env.example  # Allow a safe example file for sharing
+
+
 # Debug
 npm-debug.log*
 yarn-debug.log*
@@ -52,7 +58,6 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
-.env.prod
 newrelic_agent.log
 tsconfig.tsbuildinfo
 .env.dev
